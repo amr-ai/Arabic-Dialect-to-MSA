@@ -79,7 +79,7 @@ A Flask-based UI with an Islamic Arabic design serves the best model (AraT5).
 
 ```bash
 cd app
-python backend.py
+python app.py
 ```
 
 Open `http://localhost:5000` in your browser. Type a dialect sentence and click "ترجمة" to translate to MSA.
