@@ -1,0 +1,11 @@
+flask>=3
+torch>=2
+transformers>=5
+pandas>=3
+datasets>=5
+evaluate>=0.4
+sacrebleu>=2.6
+scikit-learn>=1.9
+sentencepiece>=0.2
+accelerate>=1
+numpy>=2

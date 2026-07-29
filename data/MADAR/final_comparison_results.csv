@@ -1,0 +1,5 @@
+﻿Model,BLEU,chrF
+AraT5,46.76,62.67
+mT5-small,37.82,53.14
+AraBART,9.8,41.59
+Ensemble (Consensus Vote),9.79,41.56

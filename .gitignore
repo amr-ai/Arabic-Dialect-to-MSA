@@ -1,0 +1,31 @@
+# Model checkpoints (large binary files)
+models/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/*.ipynb
+!notebooks/01_FineTune_AraT5.ipynb
+!notebooks/DataPreparation.ipynb
+
+# Environment
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+__MACOSX/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الترجمة من اللهجات العربية إلى الفصحى</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="pattern-overlay"></div>
+
+    <div class="container">
+        <header class="header">
+            <div class="geometric-border"></div>
+            <div class="header-content">
+                <div class="star-pattern"></div>
+                <h1 class="title">الترجمة من اللهجات العربية<br><span class="subtitle">إلى اللغة العربية الفصحى</span></h1>
+                <div class="divider">
+                    <span class="diamond"></span>
+                </div>
+                <p class="description">نموذج AraT5 المُدرّب على أكثر من 25 لهجة عربية</p>
+            </div>
+            <div class="geometric-border bottom"></div>
+        </header>
+
+        <main class="main-content">
+            <div class="dashboard">
+                <div class="stat-card">
+                    <div class="stat-icon">🔤</div>
+                    <div class="stat-value" id="modelName">AraT5</div>
+                    <div class="stat-label">النموذج</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-value">71.56</div>
+                    <div class="stat-label">BLEU</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🌍</div>
+                    <div class="stat-value">25+</div>
+                    <div class="stat-label">لهجة</div>
+                </div>
+                <div class="stat-card" id="deviceCard">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-value" id="deviceStatus">جاري التحميل...</div>
+                    <div class="stat-label">المُعالج</div>
+                </div>
+            </div>
+
+            <div class="translation-card">
+                <div class="card-header">
+                    <h2><span class="icon-pen"></span> أدخل النص باللهجة</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <textarea id="inputText" class="arabic-input" placeholder="اكتب جملة باللهجة العربية هنا..." rows="3"></textarea>
+                        <button id="translateBtn" class="btn-primary">
+                            <span class="btn-text">ترجمة</span>
+                            <span class="btn-icon">⟶</span>
+                        </button>
+                    </div>
+                    <div class="examples">
+                        <span class="example-label">أمثلة:</span>
+                        <button class="example-btn" data-text="عامل ايه">مصري</button>
+                        <button class="example-btn" data-text="شنو هاذا">خليجي</button>
+                        <button class="example-btn" data-text="شو عامل">شامي</button>
+                        <button class="example-btn" data-text="واش راك">مغاربي</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultSection" class="result-card hidden">
+                <div class="card-header">
+                    <h2><span class="icon-result"></span> الترجمة إلى الفصحى</h2>
+                </div>
+                <div class="card-body">
+                    <div class="result-row">
+                        <div class="result-label">النص الأصلي (باللهجة):</div>
+                        <div id="originalText" class="result-text source-text"></div>
+                    </div>
+                    <div class="result-divider"></div>
+                    <div class="result-row">
+                        <div class="result-label">النص بعد الترجمة (فصحى):</div>
+                        <div id="translatedText" class="result-text target-text"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="geometric-border"></div>
+            <p> Arabic Dialect to MSA Translation — AraT5</p>
+        </footer>
+    </div>
+
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="spinner">
+            <div class="star-spinner"></div>
+        </div>
+        <p class="loading-text">جاري الترجمة...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
