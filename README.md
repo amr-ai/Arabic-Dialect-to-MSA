@@ -114,3 +114,5 @@ curl -X POST http://localhost:5000/api/translate \
 - AraT5 trained on NVIDIA RTX 2000 Ada (CUDA).
 - Random seed 42 used across all splits for consistent test sets.
 - FP16 disabled for T5-family models (causes NaN); BF16 used when supported.
+
+the Model: https://drive.google.com/drive/folders/1WuTLjVn10eALqjfMuw_VSM-ZA0k7fEmR?usp=sharing
